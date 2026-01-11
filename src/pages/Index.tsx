@@ -35,6 +35,7 @@ const categories = [
   { id: 'health', name: 'Здоровье', icon: 'Activity', color: 'bg-green-100' },
   { id: 'growth', name: 'Саморазвитие', icon: 'Sparkles', color: 'bg-purple-100' },
   { id: 'finance', name: 'Финансы', icon: 'DollarSign', color: 'bg-yellow-100' },
+  { id: 'existential', name: 'Экзистенция', icon: 'Brain', color: 'bg-indigo-100' },
 ];
 
 const mockDiscussions: Discussion[] = [
@@ -128,6 +129,26 @@ const mockDiscussions: Discussion[] = [
     excerpt: 'Зарплата вроде нормальная, но к концу месяца всегда ноль. Хочу начать откладывать, но не получается...',
     timeAgo: '1 неделю назад',
     comments: []
+  },
+  {
+    id: 6,
+    title: 'В чём смысл всего этого?',
+    category: 'existential',
+    author: 'Владимир Н.',
+    authorInitials: 'ВН',
+    meTooCount: 421,
+    commentsCount: 67,
+    excerpt: 'Работа-дом-работа. Зачем всё это? Иногда останавливаюсь и думаю: а что дальше? Куда я иду и зачем?',
+    timeAgo: '4 часа назад',
+    comments: [
+      {
+        id: 1,
+        author: 'Татьяна Л.',
+        authorInitials: 'ТЛ',
+        text: 'Эти вопросы приходят ко всем в какой-то момент. Для меня смысл появился, когда я начала искать то, что приносит радость именно мне, а не соответствие чьим-то ожиданиям.',
+        timeAgo: '2 часа назад'
+      }
+    ]
   }
 ];
 
@@ -137,6 +158,7 @@ const stats = [
   { category: 'Здоровье', count: 743, trend: '+15%' },
   { category: 'Саморазвитие', count: 1089, trend: '+22%' },
   { category: 'Финансы', count: 634, trend: '+5%' },
+  { category: 'Экзистенция', count: 567, trend: '+18%' },
 ];
 
 export default function Index() {
